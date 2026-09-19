@@ -1,0 +1,25 @@
+name: PjsipBindings
+description: Автоматически сгенерированные биндинги PJSIP для Flutter
+output: 'lib/pjsip_bindings.dart' # Куда сохранить результат
+
+ignore-source-errors: true
+
+compiler-opts:
+  - '-DPJ_IS_LITTLE_ENDIAN=1' # Явно говорим, что у нас Little Endian (для Apple M-серии)
+  - '-DPJ_IS_BIG_ENDIAN=0'
+  - '-target'
+  - 'arm64-apple-macos' # Указываем целевую архитектуру Mac
+  - '-isysroot'
+  - '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk' # Путь к системным хедерам (исправит limits.h)
+  # Путь к заголовочным файлам PJSIP
+  - '-I/Users/jocker/Downloads/pjproject-2.17/pjlib/include'
+  - '-I/Users/jocker/Downloads/pjproject-2.17/pjlib-util/include'
+  - '-I/Users/jocker/Downloads/pjproject-2.17/pjsip/include'
+  - '-I/Users/jocker/Downloads/pjproject-2.17/pjmedia/include'
+  - '-I/Users/jocker/Downloads/pjproject-2.17/pjnath/include'
+
+headers:
+  entry-points:
+    # Главный заголовочный файл PJSIP (C-интерфейс pjsua)
+    - '/Users/jocker/Downloads/pjproject-2.17/pjsip/include/pjsua.h'
+

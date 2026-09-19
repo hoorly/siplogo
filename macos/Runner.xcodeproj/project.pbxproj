@@ -1,0 +1,1001 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		33CC111A2044C6BA0003C045 /* Flutter Assemble */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 33CC111B2044C6BA0003C045 /* Build configuration list for PBXAggregateTarget "Flutter Assemble" */;
+			buildPhases = (
+				33CC111E2044C6BF0003C045 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Flutter Assemble";
+			productName = FLX;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		331C80D8294CF71000263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C80D7294CF71000263BE5 /* RunnerTests.swift */; };
+		335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */; };
+		33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC10F02044A3C60003C045 /* AppDelegate.swift */; };
+		33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F22044A3C60003C045 /* Assets.xcassets */; };
+		33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F42044A3C60003C045 /* MainMenu.xib */; };
+		33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC11122044BFA00003C045 /* MainFlutterWindow.swift */; };
+		78A318202AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 78A3181F2AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage */; };
+		A71F241B305ED860007AEFB0 /* libspeex.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F3305ED85F007AEFB0 /* libspeex.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F241C305ED860007AEFB0 /* libpjnath.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F4305ED85F007AEFB0 /* libpjnath.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F241D305ED860007AEFB0 /* libpjmedia-audiodev.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F5305ED85F007AEFB0 /* libpjmedia-audiodev.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F241E305ED860007AEFB0 /* libpj.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F6305ED85F007AEFB0 /* libpj.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F241F305ED860007AEFB0 /* libpjsip.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F7305ED85F007AEFB0 /* libpjsip.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2420305ED860007AEFB0 /* libpjsua2.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F8305ED85F007AEFB0 /* libpjsua2.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2421305ED860007AEFB0 /* libpjmedia-videodev.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F9305ED85F007AEFB0 /* libpjmedia-videodev.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2422305ED860007AEFB0 /* libresample.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FA305ED85F007AEFB0 /* libresample.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2423305ED860007AEFB0 /* libpjmedia-codec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FB305ED85F007AEFB0 /* libpjmedia-codec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2424305ED860007AEFB0 /* libwebrtc.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FC305ED85F007AEFB0 /* libwebrtc.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2425305ED860007AEFB0 /* libpjmedia-audiodev.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FD305ED85F007AEFB0 /* libpjmedia-audiodev.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2426305ED860007AEFB0 /* libpjsua.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FE305ED85F007AEFB0 /* libpjsua.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2427305ED860007AEFB0 /* libwebrtc.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FF305ED85F007AEFB0 /* libwebrtc.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2428305ED860007AEFB0 /* libpjsip.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2400305ED85F007AEFB0 /* libpjsip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2429305ED860007AEFB0 /* libpjmedia-videodev.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2401305ED85F007AEFB0 /* libpjmedia-videodev.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F242A305ED860007AEFB0 /* libpjmedia.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2402305ED85F007AEFB0 /* libpjmedia.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F242B305ED860007AEFB0 /* libilbccodec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2403305ED85F007AEFB0 /* libilbccodec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F242C305ED860007AEFB0 /* libpjlib-util.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2404305ED85F007AEFB0 /* libpjlib-util.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F242D305ED860007AEFB0 /* libg7221codec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2405305ED85F007AEFB0 /* libg7221codec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F242E305ED860007AEFB0 /* libpjsdp.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2406305ED85F007AEFB0 /* libpjsdp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F242F305ED860007AEFB0 /* libpjmedia-codec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2407305ED85F007AEFB0 /* libpjmedia-codec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2430305ED860007AEFB0 /* libsrtp.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2408305ED85F007AEFB0 /* libsrtp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2431305ED860007AEFB0 /* libpjnath.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2409305ED85F007AEFB0 /* libpjnath.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2432305ED860007AEFB0 /* libresample.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240A305ED85F007AEFB0 /* libresample.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2433305ED860007AEFB0 /* libpjlib-util.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240B305ED860007AEFB0 /* libpjlib-util.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2434305ED860007AEFB0 /* libpjsip-ua.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240C305ED860007AEFB0 /* libpjsip-ua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2435305ED860007AEFB0 /* libpjsdp.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240D305ED860007AEFB0 /* libpjsdp.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2436305ED860007AEFB0 /* libpjsip-simple.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240E305ED860007AEFB0 /* libpjsip-simple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2437305ED860007AEFB0 /* libilbccodec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240F305ED860007AEFB0 /* libilbccodec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2438305ED860007AEFB0 /* libpjsua2.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2410305ED860007AEFB0 /* libpjsua2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2439305ED860007AEFB0 /* libgsmcodec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2411305ED860007AEFB0 /* libgsmcodec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F243A305ED860007AEFB0 /* libpjsip-simple.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2412305ED860007AEFB0 /* libpjsip-simple.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F243B305ED860007AEFB0 /* libpjsip-ua.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2413305ED860007AEFB0 /* libpjsip-ua.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F243C305ED860007AEFB0 /* libpj.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2414305ED860007AEFB0 /* libpj.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F243D305ED860007AEFB0 /* libspeex.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2415305ED860007AEFB0 /* libspeex.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F243E305ED860007AEFB0 /* libpjmedia.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2416305ED860007AEFB0 /* libpjmedia.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F243F305ED860007AEFB0 /* libg7221codec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2417305ED860007AEFB0 /* libg7221codec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2440305ED860007AEFB0 /* libgsmcodec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2418305ED860007AEFB0 /* libgsmcodec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2441305ED860007AEFB0 /* libsrtp.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2419305ED860007AEFB0 /* libsrtp.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A71F2442305ED860007AEFB0 /* libpjsua.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F241A305ED860007AEFB0 /* libpjsua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		331C80D9294CF71000263BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33CC10E52044A3C60003C045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33CC10EC2044A3C60003C045;
+			remoteInfo = Runner;
+		};
+		33CC111F2044C79F0003C045 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33CC10E52044A3C60003C045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33CC111A2044C6BA0003C045;
+			remoteInfo = FLX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		33CC110E2044A8840003C045 /* Bundle Framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Bundle Framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75D877C305C37D200F0C820 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A71F241B305ED860007AEFB0 /* libspeex.dylib in Embed Frameworks */,
+				A71F241C305ED860007AEFB0 /* libpjnath.dylib.2 in Embed Frameworks */,
+				A71F241D305ED860007AEFB0 /* libpjmedia-audiodev.dylib in Embed Frameworks */,
+				A71F241E305ED860007AEFB0 /* libpj.dylib in Embed Frameworks */,
+				A71F241F305ED860007AEFB0 /* libpjsip.dylib.2 in Embed Frameworks */,
+				A71F2420305ED860007AEFB0 /* libpjsua2.dylib.2 in Embed Frameworks */,
+				A71F2421305ED860007AEFB0 /* libpjmedia-videodev.dylib in Embed Frameworks */,
+				A71F2422305ED860007AEFB0 /* libresample.dylib in Embed Frameworks */,
+				A71F2423305ED860007AEFB0 /* libpjmedia-codec.dylib in Embed Frameworks */,
+				A71F2424305ED860007AEFB0 /* libwebrtc.dylib in Embed Frameworks */,
+				A71F2425305ED860007AEFB0 /* libpjmedia-audiodev.dylib.2 in Embed Frameworks */,
+				A71F2426305ED860007AEFB0 /* libpjsua.dylib.2 in Embed Frameworks */,
+				A71F2427305ED860007AEFB0 /* libwebrtc.dylib.2 in Embed Frameworks */,
+				A71F2428305ED860007AEFB0 /* libpjsip.dylib in Embed Frameworks */,
+				A71F2429305ED860007AEFB0 /* libpjmedia-videodev.dylib.2 in Embed Frameworks */,
+				A71F242A305ED860007AEFB0 /* libpjmedia.dylib in Embed Frameworks */,
+				A71F242B305ED860007AEFB0 /* libilbccodec.dylib.2 in Embed Frameworks */,
+				A71F242C305ED860007AEFB0 /* libpjlib-util.dylib in Embed Frameworks */,
+				A71F242D305ED860007AEFB0 /* libg7221codec.dylib.2 in Embed Frameworks */,
+				A71F242E305ED860007AEFB0 /* libpjsdp.dylib in Embed Frameworks */,
+				A71F242F305ED860007AEFB0 /* libpjmedia-codec.dylib.2 in Embed Frameworks */,
+				A71F2430305ED860007AEFB0 /* libsrtp.dylib in Embed Frameworks */,
+				A71F2431305ED860007AEFB0 /* libpjnath.dylib in Embed Frameworks */,
+				A71F2432305ED860007AEFB0 /* libresample.dylib.2 in Embed Frameworks */,
+				A71F2433305ED860007AEFB0 /* libpjlib-util.dylib.2 in Embed Frameworks */,
+				A71F2434305ED860007AEFB0 /* libpjsip-ua.dylib in Embed Frameworks */,
+				A71F2435305ED860007AEFB0 /* libpjsdp.dylib.2 in Embed Frameworks */,
+				A71F2436305ED860007AEFB0 /* libpjsip-simple.dylib in Embed Frameworks */,
+				A71F2437305ED860007AEFB0 /* libilbccodec.dylib in Embed Frameworks */,
+				A71F2438305ED860007AEFB0 /* libpjsua2.dylib in Embed Frameworks */,
+				A71F2439305ED860007AEFB0 /* libgsmcodec.dylib in Embed Frameworks */,
+				A71F243A305ED860007AEFB0 /* libpjsip-simple.dylib.2 in Embed Frameworks */,
+				A71F243B305ED860007AEFB0 /* libpjsip-ua.dylib.2 in Embed Frameworks */,
+				A71F243C305ED860007AEFB0 /* libpj.dylib.2 in Embed Frameworks */,
+				A71F243D305ED860007AEFB0 /* libspeex.dylib.2 in Embed Frameworks */,
+				A71F243E305ED860007AEFB0 /* libpjmedia.dylib.2 in Embed Frameworks */,
+				A71F243F305ED860007AEFB0 /* libg7221codec.dylib in Embed Frameworks */,
+				A71F2440305ED860007AEFB0 /* libgsmcodec.dylib.2 in Embed Frameworks */,
+				A71F2441305ED860007AEFB0 /* libsrtp.dylib.2 in Embed Frameworks */,
+				A71F2442305ED860007AEFB0 /* libpjsua.dylib in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		331C80D5294CF71000263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		331C80D7294CF71000263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
+		333000ED22D3DE5D00554162 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedPluginRegistrant.swift; sourceTree = "<group>"; };
+		33CC10ED2044A3C60003C045 /* siplogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = siplogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CC10F02044A3C60003C045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33CC10F22044A3C60003C045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Runner/Assets.xcassets; sourceTree = "<group>"; };
+		33CC10F52044A3C60003C045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		33CC10F72044A3C60003C045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Runner/Info.plist; sourceTree = "<group>"; };
+		33CC11122044BFA00003C045 /* MainFlutterWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlutterWindow.swift; sourceTree = "<group>"; };
+		33CEB47222A05771004F2AC0 /* Flutter-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Flutter-Debug.xcconfig"; sourceTree = "<group>"; };
+		33CEB47422A05771004F2AC0 /* Flutter-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Flutter-Release.xcconfig"; sourceTree = "<group>"; };
+		33CEB47722A0578A004F2AC0 /* Flutter-Generated.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Flutter-Generated.xcconfig"; path = "ephemeral/Flutter-Generated.xcconfig"; sourceTree = "<group>"; };
+		33E51913231747F40026EE4D /* DebugProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugProfile.entitlements; sourceTree = "<group>"; };
+		33E51914231749380026EE4D /* Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Release.entitlements; sourceTree = "<group>"; };
+		33E5194F232828860026EE4D /* AppInfo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppInfo.xcconfig; sourceTree = "<group>"; };
+		78E0A7A72DC9AD7400C4905E /* FlutterGeneratedPluginSwiftPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FlutterGeneratedPluginSwiftPackage; path = ephemeral/Packages/FlutterGeneratedPluginSwiftPackage; sourceTree = "<group>"; };
+		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		A71F23F3305ED85F007AEFB0 /* libspeex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libspeex.dylib; path = ../libs/libspeex.dylib; sourceTree = "<group>"; };
+		A71F23F4305ED85F007AEFB0 /* libpjnath.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjnath.dylib.2; path = ../libs/libpjnath.dylib.2; sourceTree = "<group>"; };
+		A71F23F5305ED85F007AEFB0 /* libpjmedia-audiodev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-audiodev.dylib"; path = "../libs/libpjmedia-audiodev.dylib"; sourceTree = "<group>"; };
+		A71F23F6305ED85F007AEFB0 /* libpj.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpj.dylib; path = ../libs/libpj.dylib; sourceTree = "<group>"; };
+		A71F23F7305ED85F007AEFB0 /* libpjsip.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsip.dylib.2; path = ../libs/libpjsip.dylib.2; sourceTree = "<group>"; };
+		A71F23F8305ED85F007AEFB0 /* libpjsua2.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua2.dylib.2; path = ../libs/libpjsua2.dylib.2; sourceTree = "<group>"; };
+		A71F23F9305ED85F007AEFB0 /* libpjmedia-videodev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-videodev.dylib"; path = "../libs/libpjmedia-videodev.dylib"; sourceTree = "<group>"; };
+		A71F23FA305ED85F007AEFB0 /* libresample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresample.dylib; path = ../libs/libresample.dylib; sourceTree = "<group>"; };
+		A71F23FB305ED85F007AEFB0 /* libpjmedia-codec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-codec.dylib"; path = "../libs/libpjmedia-codec.dylib"; sourceTree = "<group>"; };
+		A71F23FC305ED85F007AEFB0 /* libwebrtc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libwebrtc.dylib; path = ../libs/libwebrtc.dylib; sourceTree = "<group>"; };
+		A71F23FD305ED85F007AEFB0 /* libpjmedia-audiodev.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-audiodev.dylib.2"; path = "../libs/libpjmedia-audiodev.dylib.2"; sourceTree = "<group>"; };
+		A71F23FE305ED85F007AEFB0 /* libpjsua.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua.dylib.2; path = ../libs/libpjsua.dylib.2; sourceTree = "<group>"; };
+		A71F23FF305ED85F007AEFB0 /* libwebrtc.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libwebrtc.dylib.2; path = ../libs/libwebrtc.dylib.2; sourceTree = "<group>"; };
+		A71F2400305ED85F007AEFB0 /* libpjsip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsip.dylib; path = ../libs/libpjsip.dylib; sourceTree = "<group>"; };
+		A71F2401305ED85F007AEFB0 /* libpjmedia-videodev.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-videodev.dylib.2"; path = "../libs/libpjmedia-videodev.dylib.2"; sourceTree = "<group>"; };
+		A71F2402305ED85F007AEFB0 /* libpjmedia.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjmedia.dylib; path = ../libs/libpjmedia.dylib; sourceTree = "<group>"; };
+		A71F2403305ED85F007AEFB0 /* libilbccodec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libilbccodec.dylib.2; path = ../libs/libilbccodec.dylib.2; sourceTree = "<group>"; };
+		A71F2404305ED85F007AEFB0 /* libpjlib-util.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjlib-util.dylib"; path = "../libs/libpjlib-util.dylib"; sourceTree = "<group>"; };
+		A71F2405305ED85F007AEFB0 /* libg7221codec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg7221codec.dylib.2; path = ../libs/libg7221codec.dylib.2; sourceTree = "<group>"; };
+		A71F2406305ED85F007AEFB0 /* libpjsdp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsdp.dylib; path = ../libs/libpjsdp.dylib; sourceTree = "<group>"; };
+		A71F2407305ED85F007AEFB0 /* libpjmedia-codec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-codec.dylib.2"; path = "../libs/libpjmedia-codec.dylib.2"; sourceTree = "<group>"; };
+		A71F2408305ED85F007AEFB0 /* libsrtp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsrtp.dylib; path = ../libs/libsrtp.dylib; sourceTree = "<group>"; };
+		A71F2409305ED85F007AEFB0 /* libpjnath.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjnath.dylib; path = ../libs/libpjnath.dylib; sourceTree = "<group>"; };
+		A71F240A305ED85F007AEFB0 /* libresample.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresample.dylib.2; path = ../libs/libresample.dylib.2; sourceTree = "<group>"; };
+		A71F240B305ED860007AEFB0 /* libpjlib-util.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjlib-util.dylib.2"; path = "../libs/libpjlib-util.dylib.2"; sourceTree = "<group>"; };
+		A71F240C305ED860007AEFB0 /* libpjsip-ua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-ua.dylib"; path = "../libs/libpjsip-ua.dylib"; sourceTree = "<group>"; };
+		A71F240D305ED860007AEFB0 /* libpjsdp.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsdp.dylib.2; path = ../libs/libpjsdp.dylib.2; sourceTree = "<group>"; };
+		A71F240E305ED860007AEFB0 /* libpjsip-simple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-simple.dylib"; path = "../libs/libpjsip-simple.dylib"; sourceTree = "<group>"; };
+		A71F240F305ED860007AEFB0 /* libilbccodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libilbccodec.dylib; path = ../libs/libilbccodec.dylib; sourceTree = "<group>"; };
+		A71F2410305ED860007AEFB0 /* libpjsua2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua2.dylib; path = ../libs/libpjsua2.dylib; sourceTree = "<group>"; };
+		A71F2411305ED860007AEFB0 /* libgsmcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgsmcodec.dylib; path = ../libs/libgsmcodec.dylib; sourceTree = "<group>"; };
+		A71F2412305ED860007AEFB0 /* libpjsip-simple.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-simple.dylib.2"; path = "../libs/libpjsip-simple.dylib.2"; sourceTree = "<group>"; };
+		A71F2413305ED860007AEFB0 /* libpjsip-ua.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-ua.dylib.2"; path = "../libs/libpjsip-ua.dylib.2"; sourceTree = "<group>"; };
+		A71F2414305ED860007AEFB0 /* libpj.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpj.dylib.2; path = ../libs/libpj.dylib.2; sourceTree = "<group>"; };
+		A71F2415305ED860007AEFB0 /* libspeex.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libspeex.dylib.2; path = ../libs/libspeex.dylib.2; sourceTree = "<group>"; };
+		A71F2416305ED860007AEFB0 /* libpjmedia.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjmedia.dylib.2; path = ../libs/libpjmedia.dylib.2; sourceTree = "<group>"; };
+		A71F2417305ED860007AEFB0 /* libg7221codec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg7221codec.dylib; path = ../libs/libg7221codec.dylib; sourceTree = "<group>"; };
+		A71F2418305ED860007AEFB0 /* libgsmcodec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgsmcodec.dylib.2; path = ../libs/libgsmcodec.dylib.2; sourceTree = "<group>"; };
+		A71F2419305ED860007AEFB0 /* libsrtp.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsrtp.dylib.2; path = ../libs/libsrtp.dylib.2; sourceTree = "<group>"; };
+		A71F241A305ED860007AEFB0 /* libpjsua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua.dylib; path = ../libs/libpjsua.dylib; sourceTree = "<group>"; };
+		A75D87A8305C393600F0C820 /* libg7221codec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libg7221codec.dylib; sourceTree = "<group>"; };
+		A75D87A9305C393600F0C820 /* libg7221codec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libg7221codec.dylib.2; sourceTree = "<group>"; };
+		A75D87AA305C393600F0C820 /* libgsmcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgsmcodec.dylib; sourceTree = "<group>"; };
+		A75D87AB305C393600F0C820 /* libgsmcodec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgsmcodec.dylib.2; sourceTree = "<group>"; };
+		A75D87AC305C393600F0C820 /* libilbccodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libilbccodec.dylib; sourceTree = "<group>"; };
+		A75D87AD305C393600F0C820 /* libilbccodec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libilbccodec.dylib.2; sourceTree = "<group>"; };
+		A75D87AE305C393600F0C820 /* libpj.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpj.dylib; sourceTree = "<group>"; };
+		A75D87AF305C393600F0C820 /* libpj.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpj.dylib.2; sourceTree = "<group>"; };
+		A75D87B0305C393600F0C820 /* libpjlib-util.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjlib-util.dylib"; sourceTree = "<group>"; };
+		A75D87B1305C393600F0C820 /* libpjlib-util.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjlib-util.dylib.2"; sourceTree = "<group>"; };
+		A75D87B2305C393600F0C820 /* libpjmedia.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjmedia.dylib; sourceTree = "<group>"; };
+		A75D87B3305C393600F0C820 /* libpjmedia-audiodev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjmedia-audiodev.dylib"; sourceTree = "<group>"; };
+		A75D87B4305C393600F0C820 /* libpjmedia-audiodev.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjmedia-audiodev.dylib.2"; sourceTree = "<group>"; };
+		A75D87B5305C393600F0C820 /* libpjmedia-codec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjmedia-codec.dylib"; sourceTree = "<group>"; };
+		A75D87B6305C393600F0C820 /* libpjmedia-codec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjmedia-codec.dylib.2"; sourceTree = "<group>"; };
+		A75D87B7305C393600F0C820 /* libpjmedia-videodev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjmedia-videodev.dylib"; sourceTree = "<group>"; };
+		A75D87B8305C393600F0C820 /* libpjmedia-videodev.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjmedia-videodev.dylib.2"; sourceTree = "<group>"; };
+		A75D87B9305C393600F0C820 /* libpjmedia.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjmedia.dylib.2; sourceTree = "<group>"; };
+		A75D87BA305C393600F0C820 /* libpjnath.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjnath.dylib; sourceTree = "<group>"; };
+		A75D87BB305C393600F0C820 /* libpjnath.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjnath.dylib.2; sourceTree = "<group>"; };
+		A75D87BC305C393600F0C820 /* libpjsdp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsdp.dylib; sourceTree = "<group>"; };
+		A75D87BD305C393600F0C820 /* libpjsdp.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsdp.dylib.2; sourceTree = "<group>"; };
+		A75D87BE305C393600F0C820 /* libpjsip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsip.dylib; sourceTree = "<group>"; };
+		A75D87BF305C393600F0C820 /* libpjsip-simple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjsip-simple.dylib"; sourceTree = "<group>"; };
+		A75D87C0305C393600F0C820 /* libpjsip-simple.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjsip-simple.dylib.2"; sourceTree = "<group>"; };
+		A75D87C1305C393600F0C820 /* libpjsip-ua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjsip-ua.dylib"; sourceTree = "<group>"; };
+		A75D87C2305C393600F0C820 /* libpjsip-ua.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libpjsip-ua.dylib.2"; sourceTree = "<group>"; };
+		A75D87C3305C393600F0C820 /* libpjsip.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsip.dylib.2; sourceTree = "<group>"; };
+		A75D87C4305C393600F0C820 /* libpjsua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsua.dylib; sourceTree = "<group>"; };
+		A75D87C5305C393600F0C820 /* libpjsua.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsua.dylib.2; sourceTree = "<group>"; };
+		A75D87C6305C393600F0C820 /* libpjsua2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsua2.dylib; sourceTree = "<group>"; };
+		A75D87C7305C393600F0C820 /* libpjsua2.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpjsua2.dylib.2; sourceTree = "<group>"; };
+		A75D87C8305C393600F0C820 /* libresample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libresample.dylib; sourceTree = "<group>"; };
+		A75D87C9305C393600F0C820 /* libresample.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libresample.dylib.2; sourceTree = "<group>"; };
+		A75D87CA305C393600F0C820 /* libspeex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libspeex.dylib; sourceTree = "<group>"; };
+		A75D87CB305C393600F0C820 /* libspeex.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libspeex.dylib.2; sourceTree = "<group>"; };
+		A75D87CC305C393600F0C820 /* libsrtp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsrtp.dylib; sourceTree = "<group>"; };
+		A75D87CD305C393600F0C820 /* libsrtp.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsrtp.dylib.2; sourceTree = "<group>"; };
+		A75D87CE305C393600F0C820 /* libwebrtc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwebrtc.dylib; sourceTree = "<group>"; };
+		A75D87CF305C393600F0C820 /* libwebrtc.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwebrtc.dylib.2; sourceTree = "<group>"; };
+		A75D87D0305C393600F0C820 /* libyuv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libyuv.dylib; sourceTree = "<group>"; };
+		A75D87D1305C393600F0C820 /* libyuv.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libyuv.dylib.2; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		331C80D2294CF70F00263BE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CC10EA2044A3C60003C045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A318202AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		331C80D6294CF71000263BE5 /* RunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				331C80D7294CF71000263BE5 /* RunnerTests.swift */,
+			);
+			path = RunnerTests;
+			sourceTree = "<group>";
+		};
+		33BA886A226E78AF003329D5 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				33E5194F232828860026EE4D /* AppInfo.xcconfig */,
+				9740EEB21CF90195004384FC /* Debug.xcconfig */,
+				7AFA3C8E1D35360C0083082E /* Release.xcconfig */,
+				333000ED22D3DE5D00554162 /* Warnings.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		33CC10E42044A3C60003C045 = {
+			isa = PBXGroup;
+			children = (
+				A71F2443305EDA36007AEFB0 /* Frameworks */,
+				A75D87D2305C393600F0C820 /* libs */,
+				33FAB671232836740065AC1E /* Runner */,
+				33CEB47122A05771004F2AC0 /* Flutter */,
+				331C80D6294CF71000263BE5 /* RunnerTests */,
+				33CC10EE2044A3C60003C045 /* Products */,
+				D73912EC22F37F3D000D13A0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		33CC10EE2044A3C60003C045 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33CC10ED2044A3C60003C045 /* siplogo.app */,
+				331C80D5294CF71000263BE5 /* RunnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33CC11242044D66E0003C045 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33CC10F22044A3C60003C045 /* Assets.xcassets */,
+				33CC10F42044A3C60003C045 /* MainMenu.xib */,
+				33CC10F72044A3C60003C045 /* Info.plist */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		33CEB47122A05771004F2AC0 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				78E0A7A72DC9AD7400C4905E /* FlutterGeneratedPluginSwiftPackage */,
+				335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */,
+				33CEB47222A05771004F2AC0 /* Flutter-Debug.xcconfig */,
+				33CEB47422A05771004F2AC0 /* Flutter-Release.xcconfig */,
+				33CEB47722A0578A004F2AC0 /* Flutter-Generated.xcconfig */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		33FAB671232836740065AC1E /* Runner */ = {
+			isa = PBXGroup;
+			children = (
+				33CC10F02044A3C60003C045 /* AppDelegate.swift */,
+				33CC11122044BFA00003C045 /* MainFlutterWindow.swift */,
+				33E51913231747F40026EE4D /* DebugProfile.entitlements */,
+				33E51914231749380026EE4D /* Release.entitlements */,
+				33CC11242044D66E0003C045 /* Resources */,
+				33BA886A226E78AF003329D5 /* Configs */,
+			);
+			path = Runner;
+			sourceTree = "<group>";
+		};
+		A71F2443305EDA36007AEFB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A71F2417305ED860007AEFB0 /* libg7221codec.dylib */,
+				A71F2405305ED85F007AEFB0 /* libg7221codec.dylib.2 */,
+				A71F2411305ED860007AEFB0 /* libgsmcodec.dylib */,
+				A71F2418305ED860007AEFB0 /* libgsmcodec.dylib.2 */,
+				A71F240F305ED860007AEFB0 /* libilbccodec.dylib */,
+				A71F2403305ED85F007AEFB0 /* libilbccodec.dylib.2 */,
+				A71F23F6305ED85F007AEFB0 /* libpj.dylib */,
+				A71F2414305ED860007AEFB0 /* libpj.dylib.2 */,
+				A71F2404305ED85F007AEFB0 /* libpjlib-util.dylib */,
+				A71F240B305ED860007AEFB0 /* libpjlib-util.dylib.2 */,
+				A71F2402305ED85F007AEFB0 /* libpjmedia.dylib */,
+				A71F23F5305ED85F007AEFB0 /* libpjmedia-audiodev.dylib */,
+				A71F23FD305ED85F007AEFB0 /* libpjmedia-audiodev.dylib.2 */,
+				A71F23FB305ED85F007AEFB0 /* libpjmedia-codec.dylib */,
+				A71F2407305ED85F007AEFB0 /* libpjmedia-codec.dylib.2 */,
+				A71F23F9305ED85F007AEFB0 /* libpjmedia-videodev.dylib */,
+				A71F2401305ED85F007AEFB0 /* libpjmedia-videodev.dylib.2 */,
+				A71F2416305ED860007AEFB0 /* libpjmedia.dylib.2 */,
+				A71F2409305ED85F007AEFB0 /* libpjnath.dylib */,
+				A71F23F4305ED85F007AEFB0 /* libpjnath.dylib.2 */,
+				A71F2406305ED85F007AEFB0 /* libpjsdp.dylib */,
+				A71F240D305ED860007AEFB0 /* libpjsdp.dylib.2 */,
+				A71F2400305ED85F007AEFB0 /* libpjsip.dylib */,
+				A71F240E305ED860007AEFB0 /* libpjsip-simple.dylib */,
+				A71F2412305ED860007AEFB0 /* libpjsip-simple.dylib.2 */,
+				A71F240C305ED860007AEFB0 /* libpjsip-ua.dylib */,
+				A71F2413305ED860007AEFB0 /* libpjsip-ua.dylib.2 */,
+				A71F23F7305ED85F007AEFB0 /* libpjsip.dylib.2 */,
+				A71F241A305ED860007AEFB0 /* libpjsua.dylib */,
+				A71F23FE305ED85F007AEFB0 /* libpjsua.dylib.2 */,
+				A71F2410305ED860007AEFB0 /* libpjsua2.dylib */,
+				A71F23F8305ED85F007AEFB0 /* libpjsua2.dylib.2 */,
+				A71F23FA305ED85F007AEFB0 /* libresample.dylib */,
+				A71F240A305ED85F007AEFB0 /* libresample.dylib.2 */,
+				A71F23F3305ED85F007AEFB0 /* libspeex.dylib */,
+				A71F2415305ED860007AEFB0 /* libspeex.dylib.2 */,
+				A71F2408305ED85F007AEFB0 /* libsrtp.dylib */,
+				A71F2419305ED860007AEFB0 /* libsrtp.dylib.2 */,
+				A71F23FC305ED85F007AEFB0 /* libwebrtc.dylib */,
+				A71F23FF305ED85F007AEFB0 /* libwebrtc.dylib.2 */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		A75D87D2305C393600F0C820 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A75D87A8305C393600F0C820 /* libg7221codec.dylib */,
+				A75D87A9305C393600F0C820 /* libg7221codec.dylib.2 */,
+				A75D87AA305C393600F0C820 /* libgsmcodec.dylib */,
+				A75D87AB305C393600F0C820 /* libgsmcodec.dylib.2 */,
+				A75D87AC305C393600F0C820 /* libilbccodec.dylib */,
+				A75D87AD305C393600F0C820 /* libilbccodec.dylib.2 */,
+				A75D87AE305C393600F0C820 /* libpj.dylib */,
+				A75D87AF305C393600F0C820 /* libpj.dylib.2 */,
+				A75D87B0305C393600F0C820 /* libpjlib-util.dylib */,
+				A75D87B1305C393600F0C820 /* libpjlib-util.dylib.2 */,
+				A75D87B2305C393600F0C820 /* libpjmedia.dylib */,
+				A75D87B3305C393600F0C820 /* libpjmedia-audiodev.dylib */,
+				A75D87B4305C393600F0C820 /* libpjmedia-audiodev.dylib.2 */,
+				A75D87B5305C393600F0C820 /* libpjmedia-codec.dylib */,
+				A75D87B6305C393600F0C820 /* libpjmedia-codec.dylib.2 */,
+				A75D87B7305C393600F0C820 /* libpjmedia-videodev.dylib */,
+				A75D87B8305C393600F0C820 /* libpjmedia-videodev.dylib.2 */,
+				A75D87B9305C393600F0C820 /* libpjmedia.dylib.2 */,
+				A75D87BA305C393600F0C820 /* libpjnath.dylib */,
+				A75D87BB305C393600F0C820 /* libpjnath.dylib.2 */,
+				A75D87BC305C393600F0C820 /* libpjsdp.dylib */,
+				A75D87BD305C393600F0C820 /* libpjsdp.dylib.2 */,
+				A75D87BE305C393600F0C820 /* libpjsip.dylib */,
+				A75D87BF305C393600F0C820 /* libpjsip-simple.dylib */,
+				A75D87C0305C393600F0C820 /* libpjsip-simple.dylib.2 */,
+				A75D87C1305C393600F0C820 /* libpjsip-ua.dylib */,
+				A75D87C2305C393600F0C820 /* libpjsip-ua.dylib.2 */,
+				A75D87C3305C393600F0C820 /* libpjsip.dylib.2 */,
+				A75D87C4305C393600F0C820 /* libpjsua.dylib */,
+				A75D87C5305C393600F0C820 /* libpjsua.dylib.2 */,
+				A75D87C6305C393600F0C820 /* libpjsua2.dylib */,
+				A75D87C7305C393600F0C820 /* libpjsua2.dylib.2 */,
+				A75D87C8305C393600F0C820 /* libresample.dylib */,
+				A75D87C9305C393600F0C820 /* libresample.dylib.2 */,
+				A75D87CA305C393600F0C820 /* libspeex.dylib */,
+				A75D87CB305C393600F0C820 /* libspeex.dylib.2 */,
+				A75D87CC305C393600F0C820 /* libsrtp.dylib */,
+				A75D87CD305C393600F0C820 /* libsrtp.dylib.2 */,
+				A75D87CE305C393600F0C820 /* libwebrtc.dylib */,
+				A75D87CF305C393600F0C820 /* libwebrtc.dylib.2 */,
+				A75D87D0305C393600F0C820 /* libyuv.dylib */,
+				A75D87D1305C393600F0C820 /* libyuv.dylib.2 */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		D73912EC22F37F3D000D13A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		331C80D4294CF70F00263BE5 /* RunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 331C80DE294CF71000263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */;
+			buildPhases = (
+				331C80D1294CF70F00263BE5 /* Sources */,
+				331C80D2294CF70F00263BE5 /* Frameworks */,
+				331C80D3294CF70F00263BE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				331C80DA294CF71000263BE5 /* PBXTargetDependency */,
+			);
+			name = RunnerTests;
+			productName = RunnerTests;
+			productReference = 331C80D5294CF71000263BE5 /* RunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33CC10EC2044A3C60003C045 /* Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33CC10FB2044A3C60003C045 /* Build configuration list for PBXNativeTarget "Runner" */;
+			buildPhases = (
+				33CC10E92044A3C60003C045 /* Sources */,
+				33CC10EA2044A3C60003C045 /* Frameworks */,
+				33CC10EB2044A3C60003C045 /* Resources */,
+				33CC110E2044A8840003C045 /* Bundle Framework */,
+				3399D490228B24CF009A79C7 /* ShellScript */,
+				A75D877C305C37D200F0C820 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33CC11202044C79F0003C045 /* PBXTargetDependency */,
+			);
+			name = Runner;
+			packageProductDependencies = (
+				78A3181F2AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage */,
+			);
+			productName = Runner;
+			productReference = 33CC10ED2044A3C60003C045 /* siplogo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33CC10E52044A3C60003C045 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					331C80D4294CF70F00263BE5 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 33CC10EC2044A3C60003C045;
+					};
+					33CC10EC2044A3C60003C045 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1100;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					33CC111A2044C6BA0003C045 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 33CC10E82044A3C60003C045 /* Build configuration list for PBXProject "Runner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33CC10E42044A3C60003C045;
+			packageReferences = (
+				781AD8BC2B33823900A9FFBB /* XCLocalSwiftPackageReference "Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage" */,
+			);
+			productRefGroup = 33CC10EE2044A3C60003C045 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33CC10EC2044A3C60003C045 /* Runner */,
+				331C80D4294CF70F00263BE5 /* RunnerTests */,
+				33CC111A2044C6BA0003C045 /* Flutter Assemble */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		331C80D3294CF70F00263BE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CC10EB2044A3C60003C045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */,
+				33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3399D490228B24CF009A79C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"$PRODUCT_NAME.app\" > \"$PROJECT_DIR\"/Flutter/ephemeral/.app_filename && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/macos_assemble.sh embed\n";
+		};
+		33CC111E2044C6BF0003C045 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				Flutter/ephemeral/FlutterInputs.xcfilelist,
+			);
+			inputPaths = (
+				Flutter/ephemeral/tripwire,
+			);
+			outputFileListPaths = (
+				Flutter/ephemeral/FlutterOutputs.xcfilelist,
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/macos_assemble.sh && touch Flutter/ephemeral/tripwire";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		331C80D1294CF70F00263BE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331C80D8294CF71000263BE5 /* RunnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CC10E92044A3C60003C045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */,
+				33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */,
+				335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		331C80DA294CF71000263BE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33CC10EC2044A3C60003C045 /* Runner */;
+			targetProxy = 331C80D9294CF71000263BE5 /* PBXContainerItemProxy */;
+		};
+		33CC11202044C79F0003C045 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33CC111A2044C6BA0003C045 /* Flutter Assemble */;
+			targetProxy = 33CC111F2044C79F0003C045 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33CC10F42044A3C60003C045 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33CC10F52044A3C60003C045 /* Base */,
+			);
+			name = MainMenu.xib;
+			path = Runner;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		331C80DB294CF71000263BE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = siplogo.masterme.ru.siplogo.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/siplogo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/siplogo";
+			};
+			name = Debug;
+		};
+		331C80DC294CF71000263BE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = siplogo.masterme.ru.siplogo.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/siplogo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/siplogo";
+			};
+			name = Release;
+		};
+		331C80DD294CF71000263BE5 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = siplogo.masterme.ru.siplogo.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/siplogo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/siplogo";
+			};
+			name = Profile;
+		};
+		338D0CE9231458BD00FA5F75 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Profile;
+		};
+		338D0CEA231458BD00FA5F75 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E5194F232828860026EE4D /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Profile;
+		};
+		338D0CEB231458BD00FA5F75 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Profile;
+		};
+		33CC10F92044A3C60003C045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		33CC10FA2044A3C60003C045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		33CC10FC2044A3C60003C045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E5194F232828860026EE4D /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 83SKRARX23;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		33CC10FD2044A3C60003C045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E5194F232828860026EE4D /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Release.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		33CC111C2044C6BA0003C045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		33CC111D2044C6BA0003C045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		331C80DE294CF71000263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				331C80DB294CF71000263BE5 /* Debug */,
+				331C80DC294CF71000263BE5 /* Release */,
+				331C80DD294CF71000263BE5 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CC10E82044A3C60003C045 /* Build configuration list for PBXProject "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CC10F92044A3C60003C045 /* Debug */,
+				33CC10FA2044A3C60003C045 /* Release */,
+				338D0CE9231458BD00FA5F75 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CC10FB2044A3C60003C045 /* Build configuration list for PBXNativeTarget "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CC10FC2044A3C60003C045 /* Debug */,
+				33CC10FD2044A3C60003C045 /* Release */,
+				338D0CEA231458BD00FA5F75 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CC111B2044C6BA0003C045 /* Build configuration list for PBXAggregateTarget "Flutter Assemble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CC111C2044C6BA0003C045 /* Debug */,
+				33CC111D2044C6BA0003C045 /* Release */,
+				338D0CEB231458BD00FA5F75 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		781AD8BC2B33823900A9FFBB /* XCLocalSwiftPackageReference "Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78A3181F2AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlutterGeneratedPluginSwiftPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 33CC10E52044A3C60003C045 /* Project object */;
+}

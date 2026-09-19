@@ -1,0 +1,26 @@
+name: siplogo
+description: "Voip softphone"
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ffi: ^2.2.0
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.5
+  flutter_local_notifications: ^22.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  ffigen: ^22.0.0  # Инструмент генерации биндингов
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
