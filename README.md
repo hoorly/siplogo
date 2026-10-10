@@ -11,45 +11,67 @@ Voip softphone
   wget https://github.com/pjsip/pjproject/archive/refs/tags/2.17.tar.gz
   tar -xzf 2.17.tar.gz
 
+--- VIDEO ---
+Проверка библиотеки, что собрано с видео
+nm -gU /Users/jocker/Downloads/pjproject-2.17/pjsip/lib/libpjsua2.dylib | grep pjmedia_vid
+дожно возвращать _pjmedia_vid_stream_create
+
+brew install openh264 ffmpeg libvpx sdl2 pkg-config
+brew --prefix openh264 # Поиск путей, для включения в сборку /opt/homebrew/opt/openh264
+brew --prefix libvpx # Для сборки /opt/homebrew/opt/libvpx
+• OpenH264 — кодек H.264.
+• FFmpeg — для работы с видеопотоками и другими кодеками. !!! НЕ СОБИРАЕТСЯ С НОВЫМ ffmpeg
+• SDL2 — используется PJSIP для создания окон отображения видео (вывода графики).
+• libvpx - кодек vp8
+
+Настройка конфигурации сборки (config_site.h)
+
+Откройте или создайте файл
+mcedit /Users/jocker/Downloads/pjproject-2.17/pjlib/include/pj/config_site.h
+#define PJMEDIA_HAS_VIDEO 1
+#define PJMEDIA_HAS_FFMPEG 0
+#define PJMEDIA_HAS_OPENH264 1
+#define PJMEDIA_HAS_VIDEO_TOOLBOX 1
+#define PJMEDIA_HAS_SDL 0
+
+Проверить, что при ./configure есть
+checking OpenH264 usability... yes
+VideoToolbox is shorthand/supported... yes
+
 # Сборка libpjsua2.dylib на macOs в один файл (нов)
+export VIDEO_FLAGS="--disable-ffmpeg \
+                    --enable-video \
+                    --with-openh264=/opt/homebrew/opt/openh264 \
+                    --with-vpx=/opt/homebrew/opt/libvpx"
+export VIDEO_FLAGS="--disable-ffmpeg --disable-sdl --disable-openh264 --disable-libyuv"
 cd /Users/jocker/Downloads/pjproject-2.17 && \
 make distclean && \
 export CFLAGS="-I/usr/include -fPIC" && \
 export LDFLAGS="" && \
 ./configure --enable-shared \
---disable-ffmpeg \
---disable-sdl \
---disable-openh264 \
---disable-libyuv \
+$VIDEO_FLAGS \
 --with-ssl=internal && \
 make dep && make
 
 # Перенос в проект
 После успешного завершения команды make
 скомпилированная библиотека будет находиться в папке:
-./pjsip/lib/libpjsua2.dylib
+/Users/jocker/Downloads/pjproject-2.17/pjsip/lib/libpjsua2.dylib
 
-При попытке загрузить в приложении собранную библиотеку
-будет ошибка
-flutter: Invalid argument(s): Failed to load dynamic library '/Users/jocker/Downloads/pjproject-2.17/pjsip/lib/libpjsua2.dylib': dlopen(/Users/jocker/Downloads/pjproject-2.17/pjsip/lib/libpjsua2.dylib, 0x0001): Library not loaded: ../lib/libpjsua.dylib.2
-Reason: tried: '../lib/libpjsua.dylib.2' (no such file), '/System/Volumes/Preboot/Cryptexes/OS../lib/libpjsua.dylib.2' (no such file), '../lib/libpjsua.dylib.2' (no such file)
-
-- Для исправления относительных путей на абсолютные,
-необходимо указать их, чтобы можно было загрузить dylib в приложение
-install_name_tool -change "../lib/libpjsua.dylib.2" "/Users/jocker/Downloads/pjproject-2.17/pjsip/lib/libpjsua.dylib.2" /Users/jocker/Downloads/pjproject-2.17/pjsip/lib/libpjsua2.dylib
-- Для проверки изменений:
+- Для проверки библиотеки
 ```
 otool -L /Users/jocker/Downloads/pjproject-2.17/pjsip/lib/libpjsua2.dylib
 ```
 который покажет, что там дохуа зависимостей по размным путям,
-поэтому болт на install_name_tool и надо собрать всех вместе в одной папке
 ```
 # Из flutter папки проекта
+cd /Users/jocker/StudioProjects/siplogo && \
 mkdir -p macos/libs && \
 find /Users/jocker/Downloads/pjproject-2.17 -type f \( -name "*.dylib" -o -name "*.dylib.*" \) -exec cp -v {} macos/libs/ \;
 ```
 и поправить их
 ```
+cd /Users/jocker/StudioProjects/siplogo && \
 cd macos/libs/
 for file in *.dylib*; do
   if [ -f "$file" ] && [ ! -L "$file" ]; then
@@ -106,7 +128,10 @@ Runpath Search Paths.
 Если её нет, нажмите «+» и добавьте
 
 - Для генерации биндингов
+```
+cd /Users/jocker/StudioProjects/siplogo && \
 dart run ffigen --config ffigen.yaml
+```
 
 # Сборка dmg
 brew install create-dmg

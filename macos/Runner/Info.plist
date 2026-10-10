@@ -28,7 +28,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Нам нужен микрофон для совершения SIP-звонков</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Нам нужен микрофон для совершения SIP-звонков</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Нам нужен доступ к камере для совершения видеозвонков.</string>
 </dict>
 </plist>

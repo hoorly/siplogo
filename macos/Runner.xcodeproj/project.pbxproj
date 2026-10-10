@@ -28,46 +28,48 @@
 		33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F42044A3C60003C045 /* MainMenu.xib */; };
 		33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC11122044BFA00003C045 /* MainFlutterWindow.swift */; };
 		78A318202AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 78A3181F2AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage */; };
-		A71F241B305ED860007AEFB0 /* libspeex.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F3305ED85F007AEFB0 /* libspeex.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F241C305ED860007AEFB0 /* libpjnath.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F4305ED85F007AEFB0 /* libpjnath.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F241D305ED860007AEFB0 /* libpjmedia-audiodev.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F5305ED85F007AEFB0 /* libpjmedia-audiodev.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F241E305ED860007AEFB0 /* libpj.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F6305ED85F007AEFB0 /* libpj.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F241F305ED860007AEFB0 /* libpjsip.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F7305ED85F007AEFB0 /* libpjsip.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2420305ED860007AEFB0 /* libpjsua2.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F8305ED85F007AEFB0 /* libpjsua2.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2421305ED860007AEFB0 /* libpjmedia-videodev.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23F9305ED85F007AEFB0 /* libpjmedia-videodev.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2422305ED860007AEFB0 /* libresample.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FA305ED85F007AEFB0 /* libresample.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2423305ED860007AEFB0 /* libpjmedia-codec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FB305ED85F007AEFB0 /* libpjmedia-codec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2424305ED860007AEFB0 /* libwebrtc.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FC305ED85F007AEFB0 /* libwebrtc.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2425305ED860007AEFB0 /* libpjmedia-audiodev.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FD305ED85F007AEFB0 /* libpjmedia-audiodev.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2426305ED860007AEFB0 /* libpjsua.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FE305ED85F007AEFB0 /* libpjsua.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2427305ED860007AEFB0 /* libwebrtc.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F23FF305ED85F007AEFB0 /* libwebrtc.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2428305ED860007AEFB0 /* libpjsip.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2400305ED85F007AEFB0 /* libpjsip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2429305ED860007AEFB0 /* libpjmedia-videodev.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2401305ED85F007AEFB0 /* libpjmedia-videodev.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F242A305ED860007AEFB0 /* libpjmedia.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2402305ED85F007AEFB0 /* libpjmedia.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F242B305ED860007AEFB0 /* libilbccodec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2403305ED85F007AEFB0 /* libilbccodec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F242C305ED860007AEFB0 /* libpjlib-util.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2404305ED85F007AEFB0 /* libpjlib-util.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F242D305ED860007AEFB0 /* libg7221codec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2405305ED85F007AEFB0 /* libg7221codec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F242E305ED860007AEFB0 /* libpjsdp.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2406305ED85F007AEFB0 /* libpjsdp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F242F305ED860007AEFB0 /* libpjmedia-codec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2407305ED85F007AEFB0 /* libpjmedia-codec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2430305ED860007AEFB0 /* libsrtp.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2408305ED85F007AEFB0 /* libsrtp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2431305ED860007AEFB0 /* libpjnath.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2409305ED85F007AEFB0 /* libpjnath.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2432305ED860007AEFB0 /* libresample.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240A305ED85F007AEFB0 /* libresample.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2433305ED860007AEFB0 /* libpjlib-util.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240B305ED860007AEFB0 /* libpjlib-util.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2434305ED860007AEFB0 /* libpjsip-ua.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240C305ED860007AEFB0 /* libpjsip-ua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2435305ED860007AEFB0 /* libpjsdp.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240D305ED860007AEFB0 /* libpjsdp.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2436305ED860007AEFB0 /* libpjsip-simple.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240E305ED860007AEFB0 /* libpjsip-simple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2437305ED860007AEFB0 /* libilbccodec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F240F305ED860007AEFB0 /* libilbccodec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2438305ED860007AEFB0 /* libpjsua2.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2410305ED860007AEFB0 /* libpjsua2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2439305ED860007AEFB0 /* libgsmcodec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2411305ED860007AEFB0 /* libgsmcodec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F243A305ED860007AEFB0 /* libpjsip-simple.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2412305ED860007AEFB0 /* libpjsip-simple.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F243B305ED860007AEFB0 /* libpjsip-ua.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2413305ED860007AEFB0 /* libpjsip-ua.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F243C305ED860007AEFB0 /* libpj.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2414305ED860007AEFB0 /* libpj.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F243D305ED860007AEFB0 /* libspeex.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2415305ED860007AEFB0 /* libspeex.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F243E305ED860007AEFB0 /* libpjmedia.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2416305ED860007AEFB0 /* libpjmedia.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F243F305ED860007AEFB0 /* libg7221codec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2417305ED860007AEFB0 /* libg7221codec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2440305ED860007AEFB0 /* libgsmcodec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2418305ED860007AEFB0 /* libgsmcodec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2441305ED860007AEFB0 /* libsrtp.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F2419305ED860007AEFB0 /* libsrtp.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A71F2442305ED860007AEFB0 /* libpjsua.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A71F241A305ED860007AEFB0 /* libpjsua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6156307A11A500A4529D /* libpjsip.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE612C307A11A400A4529D /* libpjsip.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6157307A11A500A4529D /* libpjsua.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE612D307A11A400A4529D /* libpjsua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6158307A11A500A4529D /* libpjsip.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE612E307A11A400A4529D /* libpjsip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6159307A11A500A4529D /* libyuv.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE612F307A11A400A4529D /* libyuv.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE615A307A11A500A4529D /* libpjlib-util.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6130307A11A400A4529D /* libpjlib-util.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE615B307A11A500A4529D /* libresample.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6131307A11A400A4529D /* libresample.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE615C307A11A500A4529D /* libilbccodec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6132307A11A400A4529D /* libilbccodec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE615D307A11A500A4529D /* libwebrtc.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6133307A11A400A4529D /* libwebrtc.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE615E307A11A500A4529D /* libsrtp.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6134307A11A400A4529D /* libsrtp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE615F307A11A500A4529D /* libpjsdp.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6135307A11A400A4529D /* libpjsdp.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6160307A11A500A4529D /* libpjmedia-codec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6136307A11A400A4529D /* libpjmedia-codec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6161307A11A500A4529D /* libpjmedia-audiodev.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6137307A11A400A4529D /* libpjmedia-audiodev.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6162307A11A500A4529D /* libg7221codec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6138307A11A400A4529D /* libg7221codec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6163307A11A500A4529D /* libpjsip-ua.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6139307A11A400A4529D /* libpjsip-ua.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6164307A11A500A4529D /* libpjsip-simple.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE613A307A11A400A4529D /* libpjsip-simple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6165307A11A500A4529D /* libpjsua2.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE613B307A11A400A4529D /* libpjsua2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6166307A11A500A4529D /* libgsmcodec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE613C307A11A400A4529D /* libgsmcodec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6167307A11A500A4529D /* libpj.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE613D307A11A400A4529D /* libpj.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6168307A11A500A4529D /* libpjsip-ua.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE613E307A11A400A4529D /* libpjsip-ua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6169307A11A500A4529D /* libg7221codec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE613F307A11A400A4529D /* libg7221codec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE616A307A11A500A4529D /* libpjmedia.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6140307A11A400A4529D /* libpjmedia.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE616B307A11A500A4529D /* libpjmedia-videodev.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6141307A11A400A4529D /* libpjmedia-videodev.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE616C307A11A500A4529D /* libpjsua.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6142307A11A400A4529D /* libpjsua.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE616D307A11A500A4529D /* libresample.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6143307A11A400A4529D /* libresample.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE616E307A11A500A4529D /* libilbccodec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6144307A11A500A4529D /* libilbccodec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE616F307A11A500A4529D /* libpjmedia-videodev.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6145307A11A500A4529D /* libpjmedia-videodev.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6170307A11A500A4529D /* libgsmcodec.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6146307A11A500A4529D /* libgsmcodec.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6171307A11A500A4529D /* libpjmedia.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6147307A11A500A4529D /* libpjmedia.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6172307A11A500A4529D /* libpjsua2.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6148307A11A500A4529D /* libpjsua2.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6173307A11A500A4529D /* libspeex.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6149307A11A500A4529D /* libspeex.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6174307A11A500A4529D /* libpjsdp.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE614A307A11A500A4529D /* libpjsdp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6175307A11A500A4529D /* libpjmedia-audiodev.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE614B307A11A500A4529D /* libpjmedia-audiodev.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6176307A11A500A4529D /* libwebrtc.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE614C307A11A500A4529D /* libwebrtc.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6177307A11A500A4529D /* libpj.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE614D307A11A500A4529D /* libpj.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6178307A11A500A4529D /* libpjsip-simple.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE614E307A11A500A4529D /* libpjsip-simple.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE6179307A11A500A4529D /* libpjlib-util.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE614F307A11A500A4529D /* libpjlib-util.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE617A307A11A500A4529D /* libspeex.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6150307A11A500A4529D /* libspeex.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE617B307A11A500A4529D /* libpjnath.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6151307A11A500A4529D /* libpjnath.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE617C307A11A500A4529D /* libsrtp.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6152307A11A500A4529D /* libsrtp.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE617D307A11A500A4529D /* libyuv.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6153307A11A500A4529D /* libyuv.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE617E307A11A500A4529D /* libpjnath.dylib.2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6154307A11A500A4529D /* libpjnath.dylib.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FE617F307A11A500A4529D /* libpjmedia-codec.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE6155307A11A500A4529D /* libpjmedia-codec.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,46 +106,48 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A71F241B305ED860007AEFB0 /* libspeex.dylib in Embed Frameworks */,
-				A71F241C305ED860007AEFB0 /* libpjnath.dylib.2 in Embed Frameworks */,
-				A71F241D305ED860007AEFB0 /* libpjmedia-audiodev.dylib in Embed Frameworks */,
-				A71F241E305ED860007AEFB0 /* libpj.dylib in Embed Frameworks */,
-				A71F241F305ED860007AEFB0 /* libpjsip.dylib.2 in Embed Frameworks */,
-				A71F2420305ED860007AEFB0 /* libpjsua2.dylib.2 in Embed Frameworks */,
-				A71F2421305ED860007AEFB0 /* libpjmedia-videodev.dylib in Embed Frameworks */,
-				A71F2422305ED860007AEFB0 /* libresample.dylib in Embed Frameworks */,
-				A71F2423305ED860007AEFB0 /* libpjmedia-codec.dylib in Embed Frameworks */,
-				A71F2424305ED860007AEFB0 /* libwebrtc.dylib in Embed Frameworks */,
-				A71F2425305ED860007AEFB0 /* libpjmedia-audiodev.dylib.2 in Embed Frameworks */,
-				A71F2426305ED860007AEFB0 /* libpjsua.dylib.2 in Embed Frameworks */,
-				A71F2427305ED860007AEFB0 /* libwebrtc.dylib.2 in Embed Frameworks */,
-				A71F2428305ED860007AEFB0 /* libpjsip.dylib in Embed Frameworks */,
-				A71F2429305ED860007AEFB0 /* libpjmedia-videodev.dylib.2 in Embed Frameworks */,
-				A71F242A305ED860007AEFB0 /* libpjmedia.dylib in Embed Frameworks */,
-				A71F242B305ED860007AEFB0 /* libilbccodec.dylib.2 in Embed Frameworks */,
-				A71F242C305ED860007AEFB0 /* libpjlib-util.dylib in Embed Frameworks */,
-				A71F242D305ED860007AEFB0 /* libg7221codec.dylib.2 in Embed Frameworks */,
-				A71F242E305ED860007AEFB0 /* libpjsdp.dylib in Embed Frameworks */,
-				A71F242F305ED860007AEFB0 /* libpjmedia-codec.dylib.2 in Embed Frameworks */,
-				A71F2430305ED860007AEFB0 /* libsrtp.dylib in Embed Frameworks */,
-				A71F2431305ED860007AEFB0 /* libpjnath.dylib in Embed Frameworks */,
-				A71F2432305ED860007AEFB0 /* libresample.dylib.2 in Embed Frameworks */,
-				A71F2433305ED860007AEFB0 /* libpjlib-util.dylib.2 in Embed Frameworks */,
-				A71F2434305ED860007AEFB0 /* libpjsip-ua.dylib in Embed Frameworks */,
-				A71F2435305ED860007AEFB0 /* libpjsdp.dylib.2 in Embed Frameworks */,
-				A71F2436305ED860007AEFB0 /* libpjsip-simple.dylib in Embed Frameworks */,
-				A71F2437305ED860007AEFB0 /* libilbccodec.dylib in Embed Frameworks */,
-				A71F2438305ED860007AEFB0 /* libpjsua2.dylib in Embed Frameworks */,
-				A71F2439305ED860007AEFB0 /* libgsmcodec.dylib in Embed Frameworks */,
-				A71F243A305ED860007AEFB0 /* libpjsip-simple.dylib.2 in Embed Frameworks */,
-				A71F243B305ED860007AEFB0 /* libpjsip-ua.dylib.2 in Embed Frameworks */,
-				A71F243C305ED860007AEFB0 /* libpj.dylib.2 in Embed Frameworks */,
-				A71F243D305ED860007AEFB0 /* libspeex.dylib.2 in Embed Frameworks */,
-				A71F243E305ED860007AEFB0 /* libpjmedia.dylib.2 in Embed Frameworks */,
-				A71F243F305ED860007AEFB0 /* libg7221codec.dylib in Embed Frameworks */,
-				A71F2440305ED860007AEFB0 /* libgsmcodec.dylib.2 in Embed Frameworks */,
-				A71F2441305ED860007AEFB0 /* libsrtp.dylib.2 in Embed Frameworks */,
-				A71F2442305ED860007AEFB0 /* libpjsua.dylib in Embed Frameworks */,
+				A7FE6156307A11A500A4529D /* libpjsip.dylib.2 in Embed Frameworks */,
+				A7FE6157307A11A500A4529D /* libpjsua.dylib in Embed Frameworks */,
+				A7FE6158307A11A500A4529D /* libpjsip.dylib in Embed Frameworks */,
+				A7FE6159307A11A500A4529D /* libyuv.dylib.2 in Embed Frameworks */,
+				A7FE615A307A11A500A4529D /* libpjlib-util.dylib.2 in Embed Frameworks */,
+				A7FE615B307A11A500A4529D /* libresample.dylib in Embed Frameworks */,
+				A7FE615C307A11A500A4529D /* libilbccodec.dylib in Embed Frameworks */,
+				A7FE615D307A11A500A4529D /* libwebrtc.dylib.2 in Embed Frameworks */,
+				A7FE615E307A11A500A4529D /* libsrtp.dylib in Embed Frameworks */,
+				A7FE615F307A11A500A4529D /* libpjsdp.dylib.2 in Embed Frameworks */,
+				A7FE6160307A11A500A4529D /* libpjmedia-codec.dylib.2 in Embed Frameworks */,
+				A7FE6161307A11A500A4529D /* libpjmedia-audiodev.dylib in Embed Frameworks */,
+				A7FE6162307A11A500A4529D /* libg7221codec.dylib in Embed Frameworks */,
+				A7FE6163307A11A500A4529D /* libpjsip-ua.dylib.2 in Embed Frameworks */,
+				A7FE6164307A11A500A4529D /* libpjsip-simple.dylib in Embed Frameworks */,
+				A7FE6165307A11A500A4529D /* libpjsua2.dylib in Embed Frameworks */,
+				A7FE6166307A11A500A4529D /* libgsmcodec.dylib in Embed Frameworks */,
+				A7FE6167307A11A500A4529D /* libpj.dylib.2 in Embed Frameworks */,
+				A7FE6168307A11A500A4529D /* libpjsip-ua.dylib in Embed Frameworks */,
+				A7FE6169307A11A500A4529D /* libg7221codec.dylib.2 in Embed Frameworks */,
+				A7FE616A307A11A500A4529D /* libpjmedia.dylib.2 in Embed Frameworks */,
+				A7FE616B307A11A500A4529D /* libpjmedia-videodev.dylib.2 in Embed Frameworks */,
+				A7FE616C307A11A500A4529D /* libpjsua.dylib.2 in Embed Frameworks */,
+				A7FE616D307A11A500A4529D /* libresample.dylib.2 in Embed Frameworks */,
+				A7FE616E307A11A500A4529D /* libilbccodec.dylib.2 in Embed Frameworks */,
+				A7FE616F307A11A500A4529D /* libpjmedia-videodev.dylib in Embed Frameworks */,
+				A7FE6170307A11A500A4529D /* libgsmcodec.dylib.2 in Embed Frameworks */,
+				A7FE6171307A11A500A4529D /* libpjmedia.dylib in Embed Frameworks */,
+				A7FE6172307A11A500A4529D /* libpjsua2.dylib.2 in Embed Frameworks */,
+				A7FE6173307A11A500A4529D /* libspeex.dylib in Embed Frameworks */,
+				A7FE6174307A11A500A4529D /* libpjsdp.dylib in Embed Frameworks */,
+				A7FE6175307A11A500A4529D /* libpjmedia-audiodev.dylib.2 in Embed Frameworks */,
+				A7FE6176307A11A500A4529D /* libwebrtc.dylib in Embed Frameworks */,
+				A7FE6177307A11A500A4529D /* libpj.dylib in Embed Frameworks */,
+				A7FE6178307A11A500A4529D /* libpjsip-simple.dylib.2 in Embed Frameworks */,
+				A7FE6179307A11A500A4529D /* libpjlib-util.dylib in Embed Frameworks */,
+				A7FE617A307A11A500A4529D /* libspeex.dylib.2 in Embed Frameworks */,
+				A7FE617B307A11A500A4529D /* libpjnath.dylib in Embed Frameworks */,
+				A7FE617C307A11A500A4529D /* libsrtp.dylib.2 in Embed Frameworks */,
+				A7FE617D307A11A500A4529D /* libyuv.dylib in Embed Frameworks */,
+				A7FE617E307A11A500A4529D /* libpjnath.dylib.2 in Embed Frameworks */,
+				A7FE617F307A11A500A4529D /* libpjmedia-codec.dylib in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +256,48 @@
 		A75D87CF305C393600F0C820 /* libwebrtc.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwebrtc.dylib.2; sourceTree = "<group>"; };
 		A75D87D0305C393600F0C820 /* libyuv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libyuv.dylib; sourceTree = "<group>"; };
 		A75D87D1305C393600F0C820 /* libyuv.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libyuv.dylib.2; sourceTree = "<group>"; };
+		A7FE612C307A11A400A4529D /* libpjsip.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsip.dylib.2; path = libs/libpjsip.dylib.2; sourceTree = "<group>"; };
+		A7FE612D307A11A400A4529D /* libpjsua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua.dylib; path = libs/libpjsua.dylib; sourceTree = "<group>"; };
+		A7FE612E307A11A400A4529D /* libpjsip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsip.dylib; path = libs/libpjsip.dylib; sourceTree = "<group>"; };
+		A7FE612F307A11A400A4529D /* libyuv.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libyuv.dylib.2; path = libs/libyuv.dylib.2; sourceTree = "<group>"; };
+		A7FE6130307A11A400A4529D /* libpjlib-util.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjlib-util.dylib.2"; path = "libs/libpjlib-util.dylib.2"; sourceTree = "<group>"; };
+		A7FE6131307A11A400A4529D /* libresample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresample.dylib; path = libs/libresample.dylib; sourceTree = "<group>"; };
+		A7FE6132307A11A400A4529D /* libilbccodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libilbccodec.dylib; path = libs/libilbccodec.dylib; sourceTree = "<group>"; };
+		A7FE6133307A11A400A4529D /* libwebrtc.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libwebrtc.dylib.2; path = libs/libwebrtc.dylib.2; sourceTree = "<group>"; };
+		A7FE6134307A11A400A4529D /* libsrtp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsrtp.dylib; path = libs/libsrtp.dylib; sourceTree = "<group>"; };
+		A7FE6135307A11A400A4529D /* libpjsdp.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsdp.dylib.2; path = libs/libpjsdp.dylib.2; sourceTree = "<group>"; };
+		A7FE6136307A11A400A4529D /* libpjmedia-codec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-codec.dylib.2"; path = "libs/libpjmedia-codec.dylib.2"; sourceTree = "<group>"; };
+		A7FE6137307A11A400A4529D /* libpjmedia-audiodev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-audiodev.dylib"; path = "libs/libpjmedia-audiodev.dylib"; sourceTree = "<group>"; };
+		A7FE6138307A11A400A4529D /* libg7221codec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg7221codec.dylib; path = libs/libg7221codec.dylib; sourceTree = "<group>"; };
+		A7FE6139307A11A400A4529D /* libpjsip-ua.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-ua.dylib.2"; path = "libs/libpjsip-ua.dylib.2"; sourceTree = "<group>"; };
+		A7FE613A307A11A400A4529D /* libpjsip-simple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-simple.dylib"; path = "libs/libpjsip-simple.dylib"; sourceTree = "<group>"; };
+		A7FE613B307A11A400A4529D /* libpjsua2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua2.dylib; path = libs/libpjsua2.dylib; sourceTree = "<group>"; };
+		A7FE613C307A11A400A4529D /* libgsmcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgsmcodec.dylib; path = libs/libgsmcodec.dylib; sourceTree = "<group>"; };
+		A7FE613D307A11A400A4529D /* libpj.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpj.dylib.2; path = libs/libpj.dylib.2; sourceTree = "<group>"; };
+		A7FE613E307A11A400A4529D /* libpjsip-ua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-ua.dylib"; path = "libs/libpjsip-ua.dylib"; sourceTree = "<group>"; };
+		A7FE613F307A11A400A4529D /* libg7221codec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg7221codec.dylib.2; path = libs/libg7221codec.dylib.2; sourceTree = "<group>"; };
+		A7FE6140307A11A400A4529D /* libpjmedia.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjmedia.dylib.2; path = libs/libpjmedia.dylib.2; sourceTree = "<group>"; };
+		A7FE6141307A11A400A4529D /* libpjmedia-videodev.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-videodev.dylib.2"; path = "libs/libpjmedia-videodev.dylib.2"; sourceTree = "<group>"; };
+		A7FE6142307A11A400A4529D /* libpjsua.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua.dylib.2; path = libs/libpjsua.dylib.2; sourceTree = "<group>"; };
+		A7FE6143307A11A400A4529D /* libresample.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresample.dylib.2; path = libs/libresample.dylib.2; sourceTree = "<group>"; };
+		A7FE6144307A11A500A4529D /* libilbccodec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libilbccodec.dylib.2; path = libs/libilbccodec.dylib.2; sourceTree = "<group>"; };
+		A7FE6145307A11A500A4529D /* libpjmedia-videodev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-videodev.dylib"; path = "libs/libpjmedia-videodev.dylib"; sourceTree = "<group>"; };
+		A7FE6146307A11A500A4529D /* libgsmcodec.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgsmcodec.dylib.2; path = libs/libgsmcodec.dylib.2; sourceTree = "<group>"; };
+		A7FE6147307A11A500A4529D /* libpjmedia.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjmedia.dylib; path = libs/libpjmedia.dylib; sourceTree = "<group>"; };
+		A7FE6148307A11A500A4529D /* libpjsua2.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsua2.dylib.2; path = libs/libpjsua2.dylib.2; sourceTree = "<group>"; };
+		A7FE6149307A11A500A4529D /* libspeex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libspeex.dylib; path = libs/libspeex.dylib; sourceTree = "<group>"; };
+		A7FE614A307A11A500A4529D /* libpjsdp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjsdp.dylib; path = libs/libpjsdp.dylib; sourceTree = "<group>"; };
+		A7FE614B307A11A500A4529D /* libpjmedia-audiodev.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-audiodev.dylib.2"; path = "libs/libpjmedia-audiodev.dylib.2"; sourceTree = "<group>"; };
+		A7FE614C307A11A500A4529D /* libwebrtc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libwebrtc.dylib; path = libs/libwebrtc.dylib; sourceTree = "<group>"; };
+		A7FE614D307A11A500A4529D /* libpj.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpj.dylib; path = libs/libpj.dylib; sourceTree = "<group>"; };
+		A7FE614E307A11A500A4529D /* libpjsip-simple.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjsip-simple.dylib.2"; path = "libs/libpjsip-simple.dylib.2"; sourceTree = "<group>"; };
+		A7FE614F307A11A500A4529D /* libpjlib-util.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjlib-util.dylib"; path = "libs/libpjlib-util.dylib"; sourceTree = "<group>"; };
+		A7FE6150307A11A500A4529D /* libspeex.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libspeex.dylib.2; path = libs/libspeex.dylib.2; sourceTree = "<group>"; };
+		A7FE6151307A11A500A4529D /* libpjnath.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjnath.dylib; path = libs/libpjnath.dylib; sourceTree = "<group>"; };
+		A7FE6152307A11A500A4529D /* libsrtp.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsrtp.dylib.2; path = libs/libsrtp.dylib.2; sourceTree = "<group>"; };
+		A7FE6153307A11A500A4529D /* libyuv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libyuv.dylib; path = libs/libyuv.dylib; sourceTree = "<group>"; };
+		A7FE6154307A11A500A4529D /* libpjnath.dylib.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpjnath.dylib.2; path = libs/libpjnath.dylib.2; sourceTree = "<group>"; };
+		A7FE6155307A11A500A4529D /* libpjmedia-codec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpjmedia-codec.dylib"; path = "libs/libpjmedia-codec.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +341,48 @@
 		33CC10E42044A3C60003C045 = {
 			isa = PBXGroup;
 			children = (
+				A7FE6138307A11A400A4529D /* libg7221codec.dylib */,
+				A7FE613F307A11A400A4529D /* libg7221codec.dylib.2 */,
+				A7FE613C307A11A400A4529D /* libgsmcodec.dylib */,
+				A7FE6146307A11A500A4529D /* libgsmcodec.dylib.2 */,
+				A7FE6132307A11A400A4529D /* libilbccodec.dylib */,
+				A7FE6144307A11A500A4529D /* libilbccodec.dylib.2 */,
+				A7FE614D307A11A500A4529D /* libpj.dylib */,
+				A7FE613D307A11A400A4529D /* libpj.dylib.2 */,
+				A7FE614F307A11A500A4529D /* libpjlib-util.dylib */,
+				A7FE6130307A11A400A4529D /* libpjlib-util.dylib.2 */,
+				A7FE6147307A11A500A4529D /* libpjmedia.dylib */,
+				A7FE6137307A11A400A4529D /* libpjmedia-audiodev.dylib */,
+				A7FE614B307A11A500A4529D /* libpjmedia-audiodev.dylib.2 */,
+				A7FE6155307A11A500A4529D /* libpjmedia-codec.dylib */,
+				A7FE6136307A11A400A4529D /* libpjmedia-codec.dylib.2 */,
+				A7FE6145307A11A500A4529D /* libpjmedia-videodev.dylib */,
+				A7FE6141307A11A400A4529D /* libpjmedia-videodev.dylib.2 */,
+				A7FE6140307A11A400A4529D /* libpjmedia.dylib.2 */,
+				A7FE6151307A11A500A4529D /* libpjnath.dylib */,
+				A7FE6154307A11A500A4529D /* libpjnath.dylib.2 */,
+				A7FE614A307A11A500A4529D /* libpjsdp.dylib */,
+				A7FE6135307A11A400A4529D /* libpjsdp.dylib.2 */,
+				A7FE612E307A11A400A4529D /* libpjsip.dylib */,
+				A7FE613A307A11A400A4529D /* libpjsip-simple.dylib */,
+				A7FE614E307A11A500A4529D /* libpjsip-simple.dylib.2 */,
+				A7FE613E307A11A400A4529D /* libpjsip-ua.dylib */,
+				A7FE6139307A11A400A4529D /* libpjsip-ua.dylib.2 */,
+				A7FE612C307A11A400A4529D /* libpjsip.dylib.2 */,
+				A7FE612D307A11A400A4529D /* libpjsua.dylib */,
+				A7FE6142307A11A400A4529D /* libpjsua.dylib.2 */,
+				A7FE613B307A11A400A4529D /* libpjsua2.dylib */,
+				A7FE6148307A11A500A4529D /* libpjsua2.dylib.2 */,
+				A7FE6131307A11A400A4529D /* libresample.dylib */,
+				A7FE6143307A11A400A4529D /* libresample.dylib.2 */,
+				A7FE6149307A11A500A4529D /* libspeex.dylib */,
+				A7FE6150307A11A500A4529D /* libspeex.dylib.2 */,
+				A7FE6134307A11A400A4529D /* libsrtp.dylib */,
+				A7FE6152307A11A500A4529D /* libsrtp.dylib.2 */,
+				A7FE614C307A11A500A4529D /* libwebrtc.dylib */,
+				A7FE6133307A11A400A4529D /* libwebrtc.dylib.2 */,
+				A7FE6153307A11A500A4529D /* libyuv.dylib */,
+				A7FE612F307A11A400A4529D /* libyuv.dylib.2 */,
 				A71F2443305EDA36007AEFB0 /* Frameworks */,
 				A75D87D2305C393600F0C820 /* libs */,
 				33FAB671232836740065AC1E /* Runner */,

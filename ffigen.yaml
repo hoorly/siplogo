@@ -7,6 +7,8 @@ ignore-source-errors: true
 compiler-opts:
   - '-DPJ_IS_LITTLE_ENDIAN=1' # Явно говорим, что у нас Little Endian (для Apple M-серии)
   - '-DPJ_IS_BIG_ENDIAN=0'
+  - '-DPJMEDIA_HAS_VIDEO=1' # Поддержка видео
+  - '-DPJ_HAS_VIDEO=1'
   - '-target'
   - 'arm64-apple-macos' # Указываем целевую архитектуру Mac
   - '-isysroot'

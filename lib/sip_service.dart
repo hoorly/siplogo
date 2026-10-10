@@ -41,6 +41,40 @@ void dartOnCallMediaState(int callId) {
     } else {
       print("[⚠️ PJSIP Media] Звонок активен, но аудио-слот еще не выделен.");
     }
+
+    // АКТИВАЦИЯ И ВЫВОД ВИДЕО-ОКНА SDL2
+    // Запрашиваем у PJSIP индекс видео-окна, которое закрепилось за этим звонком
+    final int videoWinId = _pjsipGlobal.pjsua_call_get_vid_win(callId);
+
+    if (videoWinId != -1) {
+      print("[📹 PJSIP Video] Обнаружено активное видео-окно ID: $videoWinId. Активируем рендеринг SDL2...");
+
+      // Явно командуем PJSIP и SDL2 отобразить окно на экране (1 = TRUE)
+      final int winStatus = _pjsipGlobal.pjsua_vid_win_set_show(videoWinId, 1);
+      if (winStatus == 0) {
+        print("[✅ PJSIP Video] Окно SDL2 успешно выведено на экран macOS!");
+
+        // 🚨 РАЗБЛОКИРУЕМ ОТПРАВКУ ВИДЕО С КАМЕРЫ (Снимаем с паузы)
+        // Аргументы: call_id, индекс видеопотока (обычно 0), операция (1 = PJSUA_CALL_VID_STRM_START)
+        final int vidStreamStatus = _pjsipGlobal.pjsua_call_set_vid_strm(
+            callId,
+            pjsua_call_vid_strm_op.PJSUA_CALL_VID_STRM_START_TRANSMIT,
+            ffi.nullptr,
+        );
+
+        if (vidStreamStatus == 0) {
+          print("[🚀 PJSIP Video] Сигнал на запуск трансляции локальной камеры успешно отправлен!");
+        } else {
+          print("[❌ PJSIP Video] Не удалось запустить локальный энкодер, код: $vidStreamStatus");
+        }
+
+      } else {
+        print("[❌ PJSIP Video] Не удалось отобразить окно SDL2, код: $winStatus");
+      }
+    } else {
+      print("[⚠️ PJSIP Video] Видео-окно еще не создано. Возможно, удаленная сторона ответила без видео (Audio-Only).");
+    }
+
   } else {
     print("[❌ PJSIP Media] Не удалось получить информацию о звонке ID: $callId, код ошибки: $status");
   }
@@ -116,6 +150,7 @@ void dartOnIncomingCall(int accId, int callId, ffi.Pointer<pjsip_rx_data> rdata)
   // 1. Сохраняем ID прилетевшего звонка в глобальную переменную
   _activeCallId = callId;
   print("[🔔 PJSIP Callback] Обнаружен входящий вызов! ID звонка: $_activeCallId");
+
   // 2. Отправляем статус "180 Ringing" на АТС, чтобы у звонящего в трубке пошли правильные гудки
   final status = _pjsipGlobal.pjsua_call_answer(_activeCallId, 180, ffi.nullptr, ffi.nullptr);
   if (status == 0) {
@@ -123,6 +158,7 @@ void dartOnIncomingCall(int accId, int callId, ffi.Pointer<pjsip_rx_data> rdata)
   } else {
     print("[❌] Ошибка отправки 180 Ringing: $status");
   }
+
   // 3. Отправляем событие во Flutter UI, чтобы вывелась карточка вызова
   _callStateStream.add(SipCallState(state: "Входящий вызов...", statusCode: 180));
 }
@@ -157,6 +193,14 @@ class SipService {
   int _accId = -1;
   // ФЛАГ ИНИЦИАЛИЗАЦИИ
   static bool _isInitialized = false;
+
+  // Храним ссылки на колбэки здесь, чтобы Garbage Collector их не уничтожил!
+  late ffi.NativeCallable _incomingCallCallable;
+  late ffi.NativeCallable _regStateCallable;
+  late ffi.NativeCallable _callStateCallable;
+  late ffi.NativeCallable _callMediaStateCallable;
+  late ffi.NativeCallable _callVidStreamCallable;
+
   // Метод для чистого закрытия PJSIP при выходе из приложения
   void terminate() {
     if (_accId != -1) {
@@ -209,44 +253,48 @@ class SipService {
     _pjsipGlobal.pjsua_config_default(uaCfg);
     _pjsipGlobal.pjsua_logging_config_default(logCfg);
     _pjsipGlobal.pjsua_media_config_default(mediaCfg);
-    logCfg.ref.level = 2; // Умеренный уровень логов
+    logCfg.ref.level = 5; // 2 умеренный
 
     // =========================================================================
-    // 2. ВСТРАИВАЕМ НАШ КОЛБЭК В КОНФИГУРАЦИЮ PJSIP
+    // ВСТРАИВАЕМ НАШ КОЛБЭК В КОНФИГУРАЦИЮ PJSIP
     // =========================================================================
     // NativeCallable.listener создает сишный указатель, безопасный для вызова из фоновых потоков
-    final incomingCallCallable = ffi.NativeCallable<
+    _incomingCallCallable = ffi.NativeCallable<
         ffi.Void Function(ffi.Int32, ffi.Int32, ffi.Pointer<pjsip_rx_data>)
     >.listener(dartOnIncomingCall);
-    uaCfg.ref.cb.on_incoming_call = incomingCallCallable.nativeFunction.cast();
 
     // ПОДКЛЮЧАЕМ КОЛБЭК СТАТУСА РЕГИСТРАЦИИ ---
-    final regStateCallable = ffi.NativeCallable<
+    _regStateCallable = ffi.NativeCallable<
         ffi.Void Function(ffi.Int32, ffi.Pointer<ffi.Void>)
     >.listener(dartOnRegState);
-    uaCfg.ref.cb.on_reg_state2 = regStateCallable.nativeFunction.cast();
+
+    // ПОДКЛЮЧАЕМ КОЛБЭК ИЗМЕНЕНИЯ СОСТОЯНИЯ ЗВОНКА
+    _callStateCallable = ffi.NativeCallable<
+        ffi.Void Function(ffi.Int32, ffi.Pointer<pjsip_rx_data>)
+    >.listener(dartOnCallState);
+
+    // регистрация медиа-колбэка:
+    _callMediaStateCallable = ffi.NativeCallable<
+        ffi.Void Function(ffi.Int32)
+    >.listener(dartOnCallMediaState);
 
     // Записываем адрес нашей Dart-функции в структуру конфига PJSIP
     // ДОБАВЛЯЕМ .cast() при присвоении, чтобы Dart не ругался на типы pjsua_acc_id и pjsua_call_id
     // Метод .cast() превратит указатель на функцию в нужный тип в рантайме
-    uaCfg.ref.cb.on_incoming_call = incomingCallCallable.nativeFunction.cast();
-    // =========================================================================
+    uaCfg.ref.cb.on_incoming_call = _incomingCallCallable.nativeFunction.cast();
+    uaCfg.ref.cb.on_call_state = _callStateCallable.nativeFunction.cast();
+    uaCfg.ref.cb.on_reg_state2 = _regStateCallable.nativeFunction.cast();
+    uaCfg.ref.cb.on_call_media_state = _callMediaStateCallable.nativeFunction.cast();
 
-    // ПОДКЛЮЧАЕМ КОЛБЭК ИЗМЕНЕНИЯ СОСТОЯНИЯ ЗВONKA
-    final callStateCallable = ffi.NativeCallable<
-        ffi.Void Function(ffi.Int32, ffi.Pointer<pjsip_rx_data>)
-    >.listener(dartOnCallState);
-    uaCfg.ref.cb.on_call_state = callStateCallable.nativeFunction.cast();
-
-    // регистрация медиа-колбэка:
-    final callMediaStateCallable = ffi.NativeCallable<
-        ffi.Void Function(ffi.Int32)
-    >.listener(dartOnCallMediaState);
-    // Записываем указатель на функцию в структуру настроек pjsua
-    uaCfg.ref.cb.on_call_media_state = callMediaStateCallable.nativeFunction.cast();
+    // Задаем лимиты медиа-портов
+    mediaCfg.ref.max_media_ports = 32;
 
     // Инициализируем и запускаем стек
-    _pjsipGlobal.pjsua_init(uaCfg, logCfg, mediaCfg);
+    final int initStatus = _pjsipGlobal.pjsua_init(uaCfg, logCfg, mediaCfg);
+    if (initStatus != 0) {
+      print("[❌ PJSIP] Ошибка выполнения pjsua_init: $initStatus");
+      return;
+    }
 
     final transportCfg = calloc<pjsua_transport_config>();
     _pjsipGlobal.pjsua_transport_config_default(transportCfg);
@@ -260,56 +308,38 @@ class SipService {
     print("[🚀] PJSIP запущен с поддержкой входящих вызовов!");
     _isInitialized = true;
 
-
-
-
-
-    // =========================================================================
-    // ШТАТНОЕ АРХИТЕКТУРНОЕ ОТКЛЮЧЕHИЕ ТЕКСТОВЫХ КАНАЛОВ ИЗ SDP
-    // =========================================================================
-    // Запрещаем кодеки t140 и red, выставляя их приоритет в 0.
-    // Если приоритет кодека равен 0, PJSIP полностью исключает его из m= линий.
-    final List<String> textCodecs = ["t140/8000", "red/1000", "t140", "t140/90000"];
-
-    for (var codecName in textCodecs) {
-      try {
-        // 1. Переводим имя кодека в обычную C-строку
-        final ffi.Pointer<ffi.Char> codecNameNative = codecName.toNativeUtf8().cast();
-
-        // 2. Создаем структуру pj_str_t штатными средствами PJSIP.
-        // В вашей библиотеке есть встроенная функция pj_str, которая принимает
-        // обычный char* и возвращает правильную, готовую структуру pj_str_t.
-        // Название функции в биндингах: pj_str или pj_str_t_from_char
-        final pj_str_t pjCodecStr = _pjsipGlobal.pj_str(codecNameNative);
-
-        // Выделяем память под структуру pj_str_t, чтобы передать её по указателю
-        final ffi.Pointer<pj_str_t> pjStrPtr = calloc<pj_str_t>();
-        pjStrPtr.ref = pjCodecStr;
-
-        // 3. Вызываем функцию изменения приоритета.
-        // Передаем указатель на pj_str_t. Значение 0 означает "disabled".
-        final int status = _pjsipGlobal.pjsua_codec_set_priority(pjStrPtr, 0);
-
-        if (status == 0) {
-          print("[🧹 PJSIP] Текстовый кодек '$codecName' успешно отключен на уровне ядра.");
-        } else {
-          print("[⚠️ PJSIP] Ошибка отключения кодека '$codecName'. Код PJSIP: $status");
-        }
-
-        // Освобождаем выделенную память C
-        calloc.free(pjStrPtr);
-        calloc.free(codecNameNative);
-      } catch (e) {
-        print("[❌ PJSIP] Исключение при деактивации кодека $codecName: $e");
-      }
+    // 📹 ПРОВЕРКА ВИДЕО-УСТРОЙСТВ ПОСЛЕ СТАРТА
+    final int vidDevCount = _pjsipGlobal.pjmedia_vid_dev_count();
+    print("[📹 PJSIP Video Check] Найдено видео-устройств в системе: $vidDevCount");
+    if (vidDevCount == 0) {
+      print("[⚠️ PJSIP Video Check] Физические камеры не найдены или у приложения нет NSCameraUsageDescription разрешений.");
+    } else {
+      print("[✅ PJSIP Video Check] Видео-подсистема успешно инициализирована и готова к работе!");
     }
-    print("[✅ PJSIP] Процедура очистки медиа-стека завершена.");
 
+    // Создаем массив под информацию о кодеках (максимум 10)
+    final int maxCodecs = 10;
+    final codecInfoArray = calloc<pjsua_codec_info>(maxCodecs);
+    final codecCountPtr = calloc<ffi.UnsignedInt>();
+    codecCountPtr.value = maxCodecs;
 
+    // Перечисляем видео-кодеки
+    final int codecStatus = _pjsipGlobal.pjsua_vid_enum_codecs(codecInfoArray, codecCountPtr.cast());
+    if (codecStatus == 0) {
+      final int count = codecCountPtr.value;
+      print("[📹 PJSIP] Найдено зарегистрированных видео-кодеков: $count");
 
-
-
-    // Чистим временную память
+      for (int i = 0; i < count; i++) {
+        // Получаем доступ к i-му элементу массива
+        final pjsua_codec_info codec = codecInfoArray[i];
+        final String codecId = codec.codec_id.ptr$1.cast<Utf8>().toDartString(length: codec.codec_id.slen);
+        print("    -> Кодек [$i]: $codecId (Приоритет: ${codec.priority})");
+      }
+    } else {
+      print("[❌ PJSIP] Не удалось перечислить видео-кодеки, код: $status");
+    }
+    calloc.free(codecInfoArray);
+    calloc.free(codecCountPtr);
     calloc.free(uaCfg);
     calloc.free(logCfg);
     calloc.free(mediaCfg);
@@ -319,22 +349,18 @@ class SipService {
 
   // Возвращает Pointer<pj_str_t> с заполненными данными
   ffi.Pointer<pj_str_t> _createPjsipString(String dartStr, List<ffi.Pointer> tracker) {
-    final utf8Ptr = dartStr.toNativeUtf8();
-    tracker.add(utf8Ptr); // Запоминаем указатель на текст, чтобы удалить потом
+    // 1. Выделяем память под саму структуру pj_str_t
     final pjStrPtr = calloc<pj_str_t>();
 
-    // Записываем указатель на строку в первые 8 байт
-    final ffi.Pointer<ffi.Pointer<ffi.Char>> ptrLocation = pjStrPtr.cast();
-    ptrLocation.value = utf8Ptr.cast<ffi.Char>();
-    // Записываем длину
-    try {
-      (pjStrPtr as dynamic).slen = utf8Ptr.length;
-    } catch (_) {
-      final ffi.Pointer<ffi.Int64> slenLocation = ffi.Pointer.fromAddress(
-          pjStrPtr.address + ffi.sizeOf<ffi.Pointer>()
-      );
-      slenLocation.value = dartStr.length;
-    }
+    // 2. Переводим Dart-строку в массив Си-символов (char*)
+    final utf8Ptr = dartStr.toNativeUtf8();
+    tracker.add(utf8Ptr); // Сохраняем для последующей очистки
+
+    // 3. Заполняем поля структуры через стандартный ffigen-маппинг
+    // В PJSIP структура pj_str_t состоит из ptr (указатель) и slen (длина)
+    pjStrPtr.ref.ptr$1 = utf8Ptr.cast<ffi.Char>();
+    pjStrPtr.ref.slen = utf8Ptr.length;
+
     return pjStrPtr;
   }
 
@@ -378,6 +404,9 @@ class SipService {
       // user_id (для некоторых АТС типа Asterisk это критично)
       // TODO: заполнение user_id (для некоторых АТС типа Asterisk это критично)
 
+      //accCfg.ref.vid_in_auto_show = 1;  // Автоматически показывать входящее видео
+      //accCfg.ref.vid_out_auto_transmit = 1; // Автоматически начинать передачу своего видео
+
       final accIdPtr = calloc<ffi.Int32>();
       // Можно добавлять ограниченное кол-во аккаунтов (например, 4)
       // Если закончатся слоты будет
@@ -394,16 +423,6 @@ class SipService {
       // Освобождаем выделенную память
       calloc.free(accCfg);
       calloc.free(accIdPtr);
-      // Чистим указатели на строки
-      calloc.free(idStr);
-      calloc.free(regStr);
-      calloc.free(realmStr);
-      calloc.free(userStr);
-      calloc.free(passStr);
-
-      // Нельзя чистить, т/к вызовем поздже асинхронно
-      //calloc.free(uaStr);
-      //calloc.free(uaStrKey);
     } finally {
       // В САМОМ КОНЦЕ, когда pjsua_acc_add уже отработал,
       // мы удаляем массивы символов, которые насоздавал toNativeUtf8()
@@ -413,7 +432,6 @@ class SipService {
       print("[🧹] Текст строк успешно очищен из памяти. Утечек нет!");
     }
   }
-
 
   // Метод совершения исходящего звонка
   void makeCall(String number, String server) {
@@ -436,18 +454,16 @@ class SipService {
       // Из-за m=text 4002 RTP/AVP 100 98
       // для ДСИ валится звонок с ошибкой 486 Busy here
       callSetting.ref.aud_cnt = 1;
-      callSetting.ref.vid_cnt = 0;
+      callSetting.ref.vid_cnt = 1;
+
       // Поле txt_cnt отвечает за Real-Time Text. Выставляем в 0.
       callSetting.ref.txt_cnt = 0;
       // Отключаем включение заблокированных/неактивных медиа-линий
       // По умолчанию там PJSUA_CALL_INCLUDE_DISABLED_MEDIA, меняем флаг на 0
       callSetting.ref.flag = 0;
-      print("[🧹 PJSIP] Установлено жесткое ограничение: aud_cnt = 1 (Только Аудио).");
-
       print("[📞 PJSIP] Инициируем вызов на: $targetUri ...");
       _callStateStream.add(SipCallState(state: "Вызываю...", statusCode: 180)); // Сразу выставляем статус старта
 
-      // Совершаем вызов через сгенерированные биндинги
       // Передаем заполненную структуру msgData четвертым аргументом (вместо ffi.nullptr)
       final status = _pjsipGlobal.pjsua_call_make_call(
           _accId,
