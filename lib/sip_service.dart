@@ -55,7 +55,7 @@ void dartOnCallMediaState(int callId) {
 
     // АКТИВАЦИЯ И ВЫВОД ВИДЕО-ОКНА SDL2
     // Запрашиваем у PJSIP индекс видео-окна, которое закрепилось за этим звонком
-    final int videoWinId = _pjsipGlobal.pjsua_call_get_vid_win(callId);
+    final int videoWinId = global.pjsua_call_get_vid_win(callId);
 
     if (videoWinId != -1) {
       print(
@@ -63,13 +63,13 @@ void dartOnCallMediaState(int callId) {
       );
 
       // Явно командуем PJSIP и SDL2 отобразить окно на экране (1 = TRUE)
-      final int winStatus = _pjsipGlobal.pjsua_vid_win_set_show(videoWinId, 1);
+      final int winStatus = global.pjsua_vid_win_set_show(videoWinId, 1);
       if (winStatus == 0) {
         print("[✅ PJSIP Video] Окно SDL2 успешно выведено на экран macOS!");
 
         // 🚨 РАЗБЛОКИРУЕМ ОТПРАВКУ ВИДЕО С КАМЕРЫ (Снимаем с паузы)
         // Аргументы: call_id, индекс видеопотока (обычно 0), операция (1 = PJSUA_CALL_VID_STRM_START)
-        final int vidStreamStatus = _pjsipGlobal.pjsua_call_set_vid_strm(
+        final int vidStreamStatus = global.pjsua_call_set_vid_strm(
           callId,
           pjsua_call_vid_strm_op.PJSUA_CALL_VID_STRM_START_TRANSMIT,
           ffi.nullptr,
